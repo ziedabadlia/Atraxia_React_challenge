@@ -28,13 +28,20 @@ const SearchField = () => {
       }}
       type="search"
       sx={{
-        "& .css-1q6at85-MuiInputBase-root-MuiOutlinedInput-root": {
-          borderRadius: "20px !important",
-          border: "1px solid #FFF",
-          bgcolor: "#F2F2F2 !important",
-        },
         "& .css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
           borderColor: "#FFF",
+          borderRadius: "20px !important",
+          border: "1px solid #FFF",
+          height: "60px",
+        },
+        "& .css-aeeyth-MuiInputBase-input-MuiOutlinedInput-input": {
+          color: "black",
+        },
+
+        bgcolor: "#f2f2f2",
+        borderRadius: "20px",
+        "&:focus": {
+          bgcolor: "#FFF !important",
         },
       }}
     />
