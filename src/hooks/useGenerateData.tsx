@@ -17,7 +17,7 @@ const useGenerateData = (number: number): dataOutput => {
         name: "Staff Name",
         number: 2,
         isStaff: true,
-        img: "./public/imgs/StaffName.png",
+        img: "/imgs/StaffName.png",
       },
     });
     tableData.push({
@@ -29,7 +29,7 @@ const useGenerateData = (number: number): dataOutput => {
         name: "Member Name",
         number: 3,
         isStaff: false,
-        img: "./public/imgs/MemberName.png",
+        img: "/imgs/MemberName.png",
       },
     });
     tableData.push({
@@ -41,7 +41,7 @@ const useGenerateData = (number: number): dataOutput => {
         name: "Username Here",
         number: 2,
         isStaff: false,
-        img: "./public/imgs/UsernameHere.png",
+        img: "/imgs/UsernameHere.png",
       },
     });
     tableData.push({
@@ -54,7 +54,7 @@ const useGenerateData = (number: number): dataOutput => {
         name: "Jack Sean",
         number: 8,
         isStaff: false,
-        img: "./public/imgs/JackSean.png",
+        img: "/imgs/JackSean.png",
       },
     });
 
@@ -67,7 +67,7 @@ const useGenerateData = (number: number): dataOutput => {
         name: "Username Here",
         number: 2,
         isStaff: false,
-        img: "./public/imgs/UsernameHere.png",
+        img: "/imgs/UsernameHere.png",
       },
     });
     tableData.push({
@@ -79,7 +79,7 @@ const useGenerateData = (number: number): dataOutput => {
         name: "{Staff Name}",
         number: 2,
         isStaff: true,
-        img: "./public/imgs/StaffName.png",
+        img: "/imgs/StaffName.png",
       },
     });
     tableData.push({
@@ -91,7 +91,7 @@ const useGenerateData = (number: number): dataOutput => {
         name: "{Staff Name}",
         number: 2,
         isStaff: true,
-        img: "./public/imgs/StaffName.png",
+        img: "/imgs/StaffName.png",
       },
     });
     tableData.push({
@@ -103,7 +103,7 @@ const useGenerateData = (number: number): dataOutput => {
         name: "Jack Sean",
         number: 8,
         isStaff: false,
-        img: "./public/imgs/JackSean.png",
+        img: "/imgs/JackSean.png",
       },
     });
     tableData.push({
@@ -115,7 +115,7 @@ const useGenerateData = (number: number): dataOutput => {
         name: "Username Here",
         number: 2,
         isStaff: false,
-        img: "./public/imgs/StaffName.png",
+        img: "/imgs/StaffName.png",
       },
     });
     tableData.push({
@@ -127,7 +127,7 @@ const useGenerateData = (number: number): dataOutput => {
         name: "{Staff Name}",
         number: 2,
         isStaff: true,
-        img: "./public/imgs/StaffName.png",
+        img: "/imgs/StaffName.png",
       },
     });
   }
