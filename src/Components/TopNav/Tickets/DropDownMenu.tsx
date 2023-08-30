@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Popover from "@mui/material/Popover";
 import { Box, MenuItem, useTheme } from "@mui/material";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { Context, ContextValue } from "../../store/Ctx";
 import useFilterData from "../../../hooks/useFilterData";
@@ -12,8 +12,9 @@ import { MenuItemNumberStyle, MenuItemStyle } from "./DropDownMenuStyle";
 export default function DropDownMenu() {
   const colors = useTheme().palette;
   const { filterByStatus } = useFilterData();
-  const { state } = React.useContext<ContextValue | undefined>(Context)!;
+  const { state } = useContext<ContextValue | undefined>(Context)!;
   const { DropDownMenuNumbers } = state;
+  console.log("DropDownMenuNumbers", DropDownMenuNumbers);
 
   interface Item {
     title: string;

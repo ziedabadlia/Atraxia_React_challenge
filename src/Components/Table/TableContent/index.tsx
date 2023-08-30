@@ -17,7 +17,7 @@ import TableDate from "./TableDate";
 const TableContent: React.FC = () => {
   const { state } = useContext<ContextValue | undefined>(Context)!;
   const { status, filter, pagination } = state;
-  const { fetchData } = useFetchData(8);
+  const { fetchData } = useFetchData();
   const { content } = useContentToDisplay();
   const { generateRandomId } = useRandomId();
 

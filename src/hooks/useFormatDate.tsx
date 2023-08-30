@@ -1,7 +1,5 @@
 import moment from "moment";
 
-// ...
-
 const useFormatDate = (date: Date) => {
   const currentDate = moment();
   const momentDate = moment(date);
