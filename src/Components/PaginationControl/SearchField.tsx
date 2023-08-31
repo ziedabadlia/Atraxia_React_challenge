@@ -36,16 +36,10 @@ const SearchField = () => {
         },
         "& .css-aeeyth-MuiInputBase-input-MuiOutlinedInput-input": {
           color: "black",
-        }
-        ,"& .css-18jed1m": {
-          borderRadius: "20px !important",
         },
-<<<<<<< HEAD
         "& .css-18jed1m": {
           borderRadius: "20px !important",
         },
-=======
->>>>>>> 7a80880aade7e26cbbb840e650150a960872b414
         bgcolor: "#f2f2f2",
         borderRadius: "20px",
       }}
