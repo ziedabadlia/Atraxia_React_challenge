@@ -14,7 +14,6 @@ export default function DropDownMenu() {
   const { filterByStatus } = useFilterData();
   const { state } = useContext<ContextValue | undefined>(Context)!;
   const { DropDownMenuNumbers } = state;
-  console.log("DropDownMenuNumbers", DropDownMenuNumbers);
 
   interface Item {
     title: string;

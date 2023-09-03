@@ -1,6 +1,6 @@
-import { Box, Grid, Typography } from "@mui/material";
-import SwapVertIcon from "@mui/icons-material/SwapVert";
-import useSort from "../../../hooks/useSort";
+import { Box, Grid, Typography } from '@mui/material';
+import SwapVertIcon from '@mui/icons-material/SwapVert';
+import useSort from '../../../hooks/useSort';
 
 const TableHeader = () => {
   const { Sorting } = useSort();
@@ -10,23 +10,20 @@ const TableHeader = () => {
   return (
     <Box
       sx={{
-        mt: "40px",
-        ml: "35px",
-        p: "15px",
+        mt: '40px',
+        ml: '35px',
+        p: '15px',
       }}
     >
       <Grid container spacing={4}>
         <Grid item xs={4}>
-          <Box
-            sx={{ display: "flex", width: "fit-content" }}
-            onClick={() => handleSort("title")}
-          >
+          <Box sx={{ display: 'flex', width: 'fit-content' }} onClick={() => handleSort('title')}>
             <Typography
-              width={"fit-content"}
+              width="fit-content"
               variant="body1"
               fontWeight="600"
               sx={{
-                cursor: "pointer",
+                cursor: 'pointer',
               }}
             >
               TICKET
@@ -36,11 +33,7 @@ const TableHeader = () => {
         </Grid>
         <Grid item xs={2}>
           <Box mr={5}>
-            <Typography
-              variant="body1"
-              fontWeight="bold"
-              sx={{ cursor: "default" }}
-            >
+            <Typography variant="body1" fontWeight="bold" sx={{ cursor: 'default' }}>
               STATUS
             </Typography>
           </Box>
@@ -48,10 +41,10 @@ const TableHeader = () => {
         <Grid item xs={2}>
           <Box
             sx={{
-              display: "flex",
-              cursor: "pointer",
+              display: 'flex',
+              cursor: 'pointer',
             }}
-            onClick={() => handleSort("date")}
+            onClick={() => handleSort('date')}
           >
             <Typography variant="body1" fontWeight="bold">
               CREATED ON
@@ -62,11 +55,11 @@ const TableHeader = () => {
         <Grid item xs={4}>
           <Box
             ml={5}
-            onClick={() => handleSort("replies")}
+            onClick={() => handleSort('replies')}
             sx={{
-              display: "flex",
-              width: "fit-content",
-              cursor: "pointer",
+              display: 'flex',
+              width: 'fit-content',
+              cursor: 'pointer',
             }}
           >
             <Typography variant="body1" fontWeight="bold">

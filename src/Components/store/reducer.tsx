@@ -128,7 +128,6 @@ const reducer = (state: State, action: Action): State => {
         },
       };
     case ActionTypes.CHANGE_PAGE:
-      console.log("action.payload", action.payload);
       return {
         ...state,
         pagination: {
