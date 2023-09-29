@@ -9,7 +9,6 @@ export interface ContextValue {
 
 const Context = createContext<ContextValue | undefined>(undefined);
 
-// Create a provider component that wraps your app and provides the context
 const ContextProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
