@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { Context, ContextValue } from "../Components/store/Ctx";
-import { ActionTypes } from "../Components/store/reducer";
-import { TableData } from "../Components/store/reducerTypes";
-
+import { useContext } from 'react';
+import { Context, ContextValue } from '../state/globalContext';
+import ActionTypes from '../state/Actions/actions'; 
+import { TableData } from '../Types'; 
 interface usePaginationOutput {
   currentPage: number;
   totalPages: number;
@@ -14,10 +13,7 @@ interface usePaginationOutput {
   endRow: number;
 }
 
-const usePagination = (
-  content: TableData[],
-  itemsPerPage: number
-): usePaginationOutput => {
+const usePagination = (content: TableData[], itemsPerPage: number): usePaginationOutput => {
   const totalItems = content.length;
   const { state, dispatch } = useContext<ContextValue | undefined>(Context)!;
   const currentPage = state.pagination.currentPage;

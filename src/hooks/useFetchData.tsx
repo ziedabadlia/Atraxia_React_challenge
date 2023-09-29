@@ -1,14 +1,14 @@
-import useGenerateData from "./useGenerateData";
-import { createServer } from "miragejs";
+import useGenerateData from './useGenerateData';
+import { createServer } from 'miragejs';
 
-import { ActionTypes } from "../Components/store/reducer";
-import { useContext } from "react";
-import { Context } from "../Components/store/Ctx";
+import  ActionTypes  from "../state/Actions/actions" 
+import { useContext } from 'react';
+import { Context } from '../state/globalContext';
 
 const data = useGenerateData(8);
 createServer({
   routes() {
-    this.get("api/data", () => {
+    this.get('api/data', () => {
       return data;
     });
   },
@@ -27,7 +27,7 @@ const useFetchData = () => {
       });
       return;
     } catch (error) {
-      console.error("Error fetching data:", error);
+      console.error('Error fetching data:', error);
       dispatch({ type: ActionTypes.FETCHING_ERROR });
       throw error;
     }

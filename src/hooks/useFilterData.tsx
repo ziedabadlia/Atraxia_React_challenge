@@ -1,9 +1,9 @@
 import { debounce } from 'lodash';
 import { useContext, useEffect, useCallback } from 'react';
-import { Context, ContextValue } from '../Components/store/Ctx';
-import { ActionTypes } from '../Components/store/reducer';
-import { TableData } from '../Components/store/reducerTypes';
-import useContentToDisplay from './useContentToDisplay';
+import { Context, ContextValue } from '../state/globalContext';
+import ActionTypes from '../state/Actions/actions';
+import { TableData } from '../Types';
+import { useContentToDisplay } from '../feature/Tickets/TicketsTable/TableContent/table.hooks';
 
 const useFilterData = (): {
   filterByTitle: () => void;
@@ -24,6 +24,8 @@ const useFilterData = (): {
   );
   const filterByTitle = () => {
     debouncedFilterByTitle(state.input);
+    dispatch({ type: ActionTypes.CHANGE_DATA_TO_COUNT, payload: 'FILTRED_DATA' });
+    dispatch({ type: ActionTypes.CHANGE_SHOULD_EXECUTE_COUNT_DATA, payload: true });
   };
 
   const filterByStatus = (input: string) => {
@@ -35,6 +37,8 @@ const useFilterData = (): {
 
   const reset = () => {
     dispatch({ type: ActionTypes.RESET });
+    dispatch({ type: ActionTypes.CHANGE_DATA_TO_COUNT, payload: 'TABLE_DATA' });
+    dispatch({ type: ActionTypes.CHANGE_SHOULD_EXECUTE_COUNT_DATA, payload: true });
   };
   useEffect(() => () => debouncedFilterByTitle.cancel(), [debouncedFilterByTitle]);
 

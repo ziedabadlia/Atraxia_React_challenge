@@ -1,23 +1,15 @@
-import { Box } from "@mui/material";
-import TopNavSupport from "./Components/TopNav/Support/TopNavSupport";
-import "./App.css";
-import Support from "./scene/Support/Support";
-import TopNavTickets from "./Components/TopNav/Tickets/TopNavTickets";
-import Table from "./Components/Table/Table";
-import { ContextProvider } from "./Components/store/Ctx";
+import { ThemeProvider } from '@emotion/react';
+import Support from './pages/support';
+import Tickets from './pages/Tickets';
+import { ContextProvider } from './state/globalContext';
+import theme from './theme';
 const App = () => {
   return (
     <ContextProvider>
-      <Box>
-        <Box>
-          <TopNavSupport />
-          <Support />
-        </Box>
-        <Box>
-          <TopNavTickets />
-          <Table />
-        </Box>
-      </Box>
+      <ThemeProvider theme={theme}>
+        <Support />
+        <Tickets />
+      </ThemeProvider>
     </ContextProvider>
   );
 };
