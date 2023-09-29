@@ -34,7 +34,7 @@ const theme = createTheme({
       fontSize: '1.2rem',
       fontStyle: 'normal',
       fontWeight: 700,
-      lineHeight: '1.875rem',
+      lineHeight: 1.875,
       letterSpacing: '0.01625rem',
     },
     h5: {
