@@ -8,10 +8,7 @@ export const searchField = {
   '& .css-aeeyth-MuiInputBase-input-MuiOutlinedInput-input': {
     color: 'black',
   },
-  '& .css-18jed1m': {
-    borderRadius: '20px !important',
-  },
-  '& .MuiOutlinedInput-notchedOutline css-igs3ac': {
+  '& .css-igs3ac': {
     borderRadius: '20px !important',
   },
   bgcolor: '#f2f2f2',
